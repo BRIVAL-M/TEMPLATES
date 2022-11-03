@@ -7,7 +7,7 @@
 .wrap {
   /* width: max-content; */
   margin-top:50px;
-  width: 400px;
+  width: 375px;
   padding: 10px;
   background:#11F985;
   border-radius: 10px;
@@ -57,6 +57,7 @@
 }
 :root{
   --clr:#000000;
+  /* --clr: whitesmoke; */
 }
 body{
   display: flex;
@@ -69,6 +70,7 @@ body{
 .navigation{
   margin-top: 100px;
   width:400px;
+ 
   height:70px;
   background:whitesmoke;
   position: relative;
@@ -108,7 +110,7 @@ body{
   color: var(--clr);
 }
 .navigation ul li.active a .icon {
-  transform: translateY(-32px);
+  transform: translateY(-37px);
 }
 .navigation ul li a .text {
   position: absolute;
@@ -263,3 +265,123 @@ a {
     filter: hue-rotate(360deg);
   }
 }
+
+
+/*_____________________________________________________________________DIGITAL CLOCK START*/
+
+
+.time_container{
+  /* background: #bdf0eb; */
+  
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  }
+#time{
+  position: relative;
+  width:250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+    
+}
+#time .circle2 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#time .circle svg {
+  position: relative;
+  transform: rotate(270deg);
+}
+#time .circle2:nth-child(1) svg{
+  width:250px;
+  height: 250px;
+}
+#time .circle2:nth-child(2) svg{
+  width:210px;
+  height: 210px;
+}
+#time .circle2:nth-child(3) svg{
+  width:170px;
+  height: 170px;
+}
+#time .circle2 svg circle{
+  width:100%;
+  height:100%;
+  fill: transparent;
+  stroke: var(--clr);
+  stroke-width: 5px;
+  transform: translate(5px,5px);
+  opacity: 0.25;
+}
+#time .circle2:nth-child(1) svg circle {
+  stroke-dasharray: 760;
+  stroke-dashoffset: 760;
+}
+#time .circle2:nth-child(2) svg circle {
+  stroke-dasharray: 630;
+  stroke-dashoffset: 630;
+}
+#time .circle2:nth-child(3) svg circle {
+  stroke-dasharray: 510;
+  stroke-dashoffset: 510;
+}
+.dots{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 10;
+}
+.dots::before{
+  content:'';
+  position: absolute;
+  top: -3px;
+  width: 15px;
+  height: 15px;
+  background: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--clr),
+  0 0 40px var(--clr),
+  0 0 60px var(--clr),
+  0 0 80px var(--clr);
+}
+.timeBox{
+  position: absolute;
+  inset:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color:#11F985; */
+  font-family: 'monospace', Courier ;
+  gap: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* .timeBox .hours::after,
+.timeBox .minutes::after{
+  content:' : ';
+  position: absolute;
+} */
+.timeBox div {
+  color: var(--c);
+  text-shadow: 0 0 10px var(--c),
+  0 0 20px var(--c);
+}
+.ap{
+  position: absolute;
+  transform: translateY(-40px);
+  font-size: 0.5em;
+  right: 97px;
+}
+
+/*_____________________________________________________________________DIGITAL CLOCK END*/
