@@ -6,12 +6,13 @@
 /*_______________________________________ Animation saisie de txt START*/
 .wrap {
   /* width: max-content; */
-  margin-top:50px;
+  margin-top: 50px;
   width: 375px;
   padding: 10px;
-  background:#11F985;
+  background: #11F985;
   border-radius: 10px;
 }
+
 .typing {
   overflow: hidden;
   white-space: nowrap;
@@ -19,47 +20,55 @@
   color: white;
   padding-right: 5px;
   animation: typing 2.5s steps(20) infinite alternate,
-              blink 0.7s infinite;
+    blink 0.7s infinite;
 }
+
 @keyframes typing {
   0% {
     width: 0%;
     visibility: hidden;
   }
+
   100% {
     width: 100%;
   }
 }
+
 @keyframes blink {
   50% {
     border-color: transparent;
   }
+
   100% {
     border-color: white;
   }
 }
+
 /*_______________________________________ Animation saisie de txt END*/
 
 /*_____________________________________________________________________ Navbar START*/
-*{  
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
+
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
-:root{
-  --clr:#000000;
+
+:root {
+  --clr: #000000;
   /* --clr: whitesmoke; */
 }
-body{
+
+body {
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -67,39 +76,44 @@ body{
   /* min-height: 100vh; */
   background: var(--clr);
 }
-.navigation{
+
+.navigation {
   margin-top: 100px;
-  width:400px;
- 
-  height:70px;
-  background:whitesmoke;
+  width: 400px;
+
+  height: 70px;
+  background: whitesmoke;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
 }
+
 .navigation ul {
   display: flex;
   width: 350px;
 }
+
 .navigation ul li {
   position: relative;
   list-style: none;
-  width:70px;
+  width: 70px;
   height: 70px;
   z-index: 1;
 }
-.navigation ul li a{
+
+.navigation ul li a {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width:100%;
+  width: 100%;
   text-align: center;
   font-weight: 500;
 }
+
 .navigation ul li a .icon {
   position: relative;
   display: block;
@@ -109,9 +123,11 @@ body{
   transition: 0.5s;
   color: var(--clr);
 }
+
 .navigation ul li.active a .icon {
   transform: translateY(-37px);
 }
+
 .navigation ul li a .text {
   position: absolute;
   color: var(--clr);
@@ -122,14 +138,17 @@ body{
   opacity: 0;
   transform: translateY(20px)
 }
+
 .navigation ul li.active a .text {
   opacity: 1;
   transform: translateY(10px);
 
 }
+
 a {
   text-decoration: none;
 }
+
 .indicator {
   position: absolute;
   top: -50%;
@@ -140,43 +159,51 @@ a {
   border: 6px solid var(--clr);
   transition: 0.5s;
 }
-.indicator::before{
-  content:'';
+
+.indicator::before {
+  content: '';
   position: absolute;
   top: 50%;
   left: -22px;
-  width:20px;
+  width: 20px;
   height: 20px;
-  background:transparent;
+  background: transparent;
   border-top-right-radius: 20px;
   box-shadow: 1px -10px 0 0 var(--clr);
 }
-.indicator::after{
-  content:'';
+
+.indicator::after {
+  content: '';
   position: absolute;
   top: 50%;
   right: -22px;
-  width:20px;
+  width: 20px;
   height: 20px;
-  background:transparent;
+  background: transparent;
   border-top-left-radius: 20px;
   box-shadow: -1px -10px 0 0 var(--clr);
 }
-.navigation ul li:nth-child(1).active ~ .indicator {
+
+.navigation ul li:nth-child(1).active~.indicator {
   transform: translateX(calc(70px * 0));
 }
-.navigation ul li:nth-child(2).active ~ .indicator {
+
+.navigation ul li:nth-child(2).active~.indicator {
   transform: translateX(calc(70px * 1));
 }
-.navigation ul li:nth-child(3).active ~ .indicator {
+
+.navigation ul li:nth-child(3).active~.indicator {
   transform: translateX(calc(70px * 2));
 }
-.navigation ul li:nth-child(4).active ~ .indicator {
+
+.navigation ul li:nth-child(4).active~.indicator {
   transform: translateX(calc(70px * 3));
 }
-.navigation ul li:nth-child(5).active ~ .indicator {
+
+.navigation ul li:nth-child(5).active~.indicator {
   transform: translateX(calc(70px * 4));
 }
+
 /*_____________________________________________________________________ Navbar END*/
 
 
@@ -186,33 +213,39 @@ a {
 
 .center {
   flex-direction: column;
-  margin-top:100px;
+  margin-top: 100px;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
+
 .outer {
   position: relative;
   margin: 30px 50px;
   background: black;
 }
-.button{
+
+.button {
   height: 70px;
   width: 220px;
   border-radius: 50px;
 }
-.circle{
+
+.circle {
   height: 200px;
   width: 200px;
   border-radius: 50%;
 }
-.outer button, .outer span {
+
+.outer button,
+.outer span {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .outer button {
   background: black;
   color: whitesmoke;
@@ -224,103 +257,167 @@ a {
   text-transform: uppercase;
   cursor: pointer;
 }
-.button button{
+
+.button button {
   height: 60px;
   width: 210px;
   border-radius: 50px;
 }
-.circle button{
+
+.circle button {
   height: 180px;
   width: 180px;
   border-radius: 50%;
 }
-.outer span{
-  height:100%;
+
+.outer span {
+  height: 100%;
   width: 100%;
-  background:inherit;
+  background: inherit;
 }
-.button span{
+
+.button span {
   border-radius: 50px;
 
 }
-.circle span{
+
+.circle span {
   border-radius: 50%;
 
 }
-.outer:hover span:nth-child(1){
+
+.outer:hover span:nth-child(1) {
   filter: blur(7px);
 }
-.outer:hover span:nth-child(2){
+
+.outer:hover span:nth-child(2) {
   filter: blur(14px);
 }
-.outer:hover{
+
+.outer:hover {
   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
   animation: rotate 1.5s linear infinite;
 }
+
 @keyframes rotate {
   0% {
     filter: hue-rotate(0deg);
   }
+
   100% {
     filter: hue-rotate(360deg);
   }
 }
 
+/*________________________________________________ BTN BORDER FX START */
+.button2 {
+
+  text-decoration: none;
+  font-size: 25px;
+  color: #11F985;
+  padding: 20px 5px;
+  border: 3px solid #11F985;
+  position: relative;
+  cursor: pointer;
+  background: black;
+  margin-top: 50px;
+}
+
+.button2::before,
+.button2::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: inherit;
+  transition: all 0.5s;
+
+}
+
+.button2::before {
+  top: -15px;
+  left: -15px;
+  border-width: 3px 0 0 3px;
+}
+
+.button2::after {
+  bottom: -15px;
+  right: -15px;
+  border-width: 0 3px 3px 0;
+}
+
+.button2:hover::before,
+.button2:hover::after {
+
+  width: calc(100% + 27px);
+  height: calc(100% + 27px);
+}
+
+/*________________________________________________ BTN BORDER FX END */
+
 
 /*_____________________________________________________________________DIGITAL CLOCK START*/
 
 
-.time_container{
+.time_container {
   /* background: #bdf0eb; */
-  
+
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
   width: 100%;
-  }
-#time{
+}
+
+#time {
   position: relative;
-  width:250px;
+  width: 250px;
   height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
- 
-    
+
+
 }
+
 #time .circle2 {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #time .circle svg {
   position: relative;
   transform: rotate(270deg);
 }
-#time .circle2:nth-child(1) svg{
-  width:250px;
+
+#time .circle2:nth-child(1) svg {
+  width: 250px;
   height: 250px;
 }
-#time .circle2:nth-child(2) svg{
-  width:210px;
+
+#time .circle2:nth-child(2) svg {
+  width: 210px;
   height: 210px;
 }
-#time .circle2:nth-child(3) svg{
-  width:170px;
+
+#time .circle2:nth-child(3) svg {
+  width: 170px;
   height: 170px;
 }
-#time .circle2 svg circle{
-  width:100%;
-  height:100%;
+
+#time .circle2 svg circle {
+  width: 100%;
+  height: 100%;
   fill: transparent;
   stroke: var(--clr);
   stroke-width: 5px;
-  transform: translate(5px,5px);
+  transform: translate(5px, 5px);
   opacity: 0.25;
 }
+
 /* #time .circle2:nth-child(1) svg circle {
   stroke-dasharray: 760;
   stroke-dashoffset: 760;
@@ -333,7 +430,7 @@ a {
   stroke-dasharray: 510;
   stroke-dashoffset: 510;
 } */
-.dots{
+.dots {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -342,8 +439,9 @@ a {
   align-items: flex-start;
   z-index: 10;
 }
-.dots::before{
-  content:'';
+
+.dots::before {
+  content: '';
   position: absolute;
   top: -3px;
   width: 15px;
@@ -351,22 +449,24 @@ a {
   background: var(--clr);
   border-radius: 50%;
   box-shadow: 0 0 20px var(--clr),
-  0 0 40px var(--clr),
-  0 0 60px var(--clr),
-  0 0 80px var(--clr);
+    0 0 40px var(--clr),
+    0 0 60px var(--clr),
+    0 0 80px var(--clr);
 }
-.timeBox{
+
+.timeBox {
   position: absolute;
-  inset:0;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   /* color:#11F985; */
-  font-family: 'monospace', Courier ;
+  font-family: 'monospace', Courier;
   gap: 15px;
   font-size: 1.5em;
   font-weight: bold;
 }
+
 /* .timeBox .hours::after,
 .timeBox .minutes::after{
   content:' : ';
@@ -375,9 +475,10 @@ a {
 .timeBox div {
   color: var(--c);
   text-shadow: 0 0 10px var(--c),
-  0 0 20px var(--c);
+    0 0 20px var(--c);
 }
-.ap{
+
+.ap {
   position: absolute;
   transform: translateY(-40px);
   font-size: 0.5em;
