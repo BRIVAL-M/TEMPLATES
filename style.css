@@ -540,4 +540,27 @@ a {
     transform: scaleY(1)
   }
 /*_________________________________BTN HOVER FX END*/
+/*____________________________________________________ BG animated START*/
+.animated-background{
+  height: 500px;
+  width: 375px;
+  margin-bottom: 50px;
+  border-radius:50px;
+  background:linear-gradient(
+    to right, rgb(23, 242, 89),rgb(255, 255, 3),rgb(248, 0, 0));
+    background-size:400% 400%;
+    animation: animated-background 10s infinite ease-in-out;
+  }
+  @keyframes animated-background{
+    0%{
+      background-position: 0 50%;
+      }
+      50%{
+        background-position: 100% 50%;
+      }
+      100%{
+        background-position:0 50%;
+      }
+  }
+/*____________________________________________________ BG animated END*/
 
